@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/complementaryFragment"
+        android:icon="@drawable/ic_complemetary"
+        android:title="Complementary" />
+    <item
+        android:id="@+id/analogousFragment"
+        android:icon="@drawable/ic_analogous"
+        android:title="Analogous" />
+    <item
+        android:id="@+id/triadicFragment"
+        android:icon="@drawable/ic_triadic"
+        android:title="Triadic" />
+</menu>

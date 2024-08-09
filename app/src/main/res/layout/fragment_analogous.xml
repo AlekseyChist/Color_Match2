@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ColorSchemeFragmentStyle">
+
+    <com.skydoves.colorpickerview.ColorPickerView
+        android:id="@+id/colorPicker"
+        style="@style/ColorPickerStyle" />
+
+    <LinearLayout style="@style/ColorResultContainerStyle">
+
+        <LinearLayout style="@style/ColorResultItemStyle">
+            <View
+                android:id="@+id/analogousColor1"
+                style="@style/ColorResultViewStyle" />
+            <TextView
+                android:id="@+id/analogousColor1Name"
+                style="@style/ColorResultTextStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ColorResultItemStyle">
+            <View
+                android:id="@+id/analogousColor2"
+                style="@style/ColorResultViewStyle" />
+            <TextView
+                android:id="@+id/analogousColor2Name"
+                style="@style/ColorResultTextStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ColorResultItemStyle">
+            <View
+                android:id="@+id/analogousColor3"
+                style="@style/ColorResultViewStyle" />
+            <TextView
+                android:id="@+id/analogousColor3Name"
+                style="@style/ColorResultTextStyle" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
