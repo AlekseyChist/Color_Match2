@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/complementaryFragment">
+
+    <fragment
+        android:id="@+id/complementaryFragment"
+        android:name="com.example.color_match2.ComplementaryFragment"
+        android:label="ComplementaryFragment" />
+
+    <fragment
+        android:id="@+id/analogousFragment"
+        android:name="com.example.color_match2.AnalogousFragment"
+        android:label="AnalogousFragment" />
+
+    <fragment
+        android:id="@+id/triadicFragment"
+        android:name="com.example.color_match2.TriadicFragment"
+        android:label="TriadicFragment" />
+</navigation>
