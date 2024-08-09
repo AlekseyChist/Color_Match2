@@ -1,3 +1,6 @@
+package com.example.color_match2
+
+import BaseColorSchemeFragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
@@ -5,6 +8,7 @@ import com.example.color_match2.databinding.FragmentAnalogousBinding
 import kotlinx.coroutines.launch
 
 class AnalogousFragment : BaseColorSchemeFragment<FragmentAnalogousBinding>() {
+
     override fun getViewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentAnalogousBinding {
         return FragmentAnalogousBinding.inflate(inflater, container, false)
     }

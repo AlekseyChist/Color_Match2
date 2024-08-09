@@ -1,83 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    style="@style/ColorSchemeFragmentStyle">
 
     <com.skydoves.colorpickerview.ColorPickerView
         android:id="@+id/colorPicker"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center_horizontal" />
+        style="@style/ColorPickerStyle" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp">
+    <LinearLayout style="@style/ColorResultContainerStyle">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
+        <LinearLayout style="@style/ColorResultItemStyle">
             <View
                 android:id="@+id/analogousColor1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal" />
-
+                style="@style/ColorResultViewStyle" />
             <TextView
                 android:id="@+id/analogousColor1Name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp" />
-
+                style="@style/ColorResultTextStyle" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
+        <LinearLayout style="@style/ColorResultItemStyle">
             <View
                 android:id="@+id/analogousColor2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal" />
-
+                style="@style/ColorResultViewStyle" />
             <TextView
                 android:id="@+id/analogousColor2Name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp" />
-
+                style="@style/ColorResultTextStyle" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
+        <LinearLayout style="@style/ColorResultItemStyle">
             <View
                 android:id="@+id/analogousColor3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal" />
-
+                style="@style/ColorResultViewStyle" />
             <TextView
                 android:id="@+id/analogousColor3Name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp" />
-
+                style="@style/ColorResultTextStyle" />
         </LinearLayout>
 
     </LinearLayout>

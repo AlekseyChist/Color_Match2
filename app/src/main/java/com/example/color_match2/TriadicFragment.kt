@@ -1,24 +1,28 @@
+package com.example.color_match2
+
+import BaseColorSchemeFragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import com.example.color_match2.databinding.FragmentAnalogousBinding
+import com.example.color_match2.databinding.FragmentTriadicBinding
 import kotlinx.coroutines.launch
 
-class TriadicFragment : BaseColorSchemeFragment<FragmentAnalogousBinding>() {
-    override fun getViewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentAnalogousBinding {
-        return FragmentAnalogousBinding.inflate(inflater, container, false)
+class TriadicFragment : BaseColorSchemeFragment<FragmentTriadicBinding>() {
+
+    override fun getViewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentTriadicBinding {
+        return FragmentTriadicBinding.inflate(inflater, container, false)
     }
 
     override fun updateColors(hex: String) {
         lifecycleScope.launch {
             try {
-                val analogousColors = colorMatcher.getTriadicColors(hex)
-                binding.analogousColor1.setBackgroundColor(android.graphics.Color.parseColor(analogousColors[0].hexCode))
-                binding.analogousColor2.setBackgroundColor(android.graphics.Color.parseColor(analogousColors[1].hexCode))
-                binding.analogousColor3.setBackgroundColor(android.graphics.Color.parseColor(analogousColors[2].hexCode))
-                binding.analogousColor1Name.text = analogousColors[0].name
-                binding.analogousColor2Name.text = analogousColors[1].name
-                binding.analogousColor3Name.text = analogousColors[2].name
+                val triadicColors = colorMatcher.getTriadicColors(hex)
+                binding.triadicColor1.setBackgroundColor(android.graphics.Color.parseColor(triadicColors[0].hexCode))
+                binding.triadicColor2.setBackgroundColor(android.graphics.Color.parseColor(triadicColors[1].hexCode))
+                binding.triadicColor3.setBackgroundColor(android.graphics.Color.parseColor(triadicColors[2].hexCode))
+                binding.triadicColor1Name.text = triadicColors[0].name
+                binding.triadicColor2Name.text = triadicColors[1].name
+                binding.triadicColor3Name.text = triadicColors[2].name
             } catch (e: Exception) {
                 // Handle error
             }

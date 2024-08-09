@@ -18,4 +18,5 @@
         android:id="@+id/triadicFragment"
         android:name="com.example.color_match2.TriadicFragment"
         android:label="TriadicFragment" />
+
 </navigation>

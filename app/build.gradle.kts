@@ -41,11 +41,9 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.navigation.fragment.ktx.v253)
+    implementation(libs.androidx.navigation.ui.ktx.v253)
     implementation("com.github.skydoves:colorpickerview:2.2.4")
-
-    implementation (libs.androidx.fragment.ktx)
-    implementation (libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.colorpickerview)
     implementation(libs.androidx.core.ktx.v1101)
     implementation(libs.androidx.appcompat.v161)
     implementation(libs.material)
@@ -59,13 +57,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.palette.ktx)
-    implementation(libs.glide)
-    implementation(libs.compiler)
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.room.compiler)
-    implementation(libs.permissionx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

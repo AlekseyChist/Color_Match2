@@ -3,13 +3,13 @@
     <item
         android:id="@+id/complementaryFragment"
         android:icon="@drawable/ic_complemetary"
-        android:title="Комплементарные" />
+        android:title="Complementary" />
     <item
         android:id="@+id/analogousFragment"
         android:icon="@drawable/ic_analogous"
-        android:title="Аналогичные" />
+        android:title="Analogous" />
     <item
         android:id="@+id/triadicFragment"
         android:icon="@drawable/ic_triadic"
-        android:title="Триадные" />
+        android:title="Triadic" />
 </menu>
