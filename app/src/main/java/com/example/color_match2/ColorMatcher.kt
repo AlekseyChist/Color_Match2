@@ -1,6 +1,5 @@
 package com.example.color_match2
 
-
 class ColorMatcher(private val api: ColorAPI) {
     suspend fun getComplementaryColors(hex: String): List<Color> {
         return getColorScheme(hex, "complement", 2)
@@ -16,9 +15,8 @@ class ColorMatcher(private val api: ColorAPI) {
 
     private suspend fun getColorScheme(hex: String, mode: String, count: Int): List<Color> {
         val response = api.getColorScheme(hex, mode, count)
-        return response.colors.map { hexCode ->
-            val colorInfo = api.getColorScheme(hexCode, "monochrome", 1).seed
-            Color(colorInfo.name.value, hexCode)
+        return response.colors.map { colorInfo ->
+            Color(colorInfo.name.value, colorInfo.hex.value)
         }
     }
 }

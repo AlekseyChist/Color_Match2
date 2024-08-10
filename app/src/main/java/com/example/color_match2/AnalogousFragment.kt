@@ -1,6 +1,5 @@
 package com.example.color_match2
 
-import BaseColorSchemeFragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
@@ -14,7 +13,7 @@ class AnalogousFragment : BaseColorSchemeFragment<FragmentAnalogousBinding>() {
     }
 
     override fun updateColors(hex: String) {
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             try {
                 val analogousColors = colorMatcher.getAnalogousColors(hex)
                 binding.analogousColor1.setBackgroundColor(android.graphics.Color.parseColor(analogousColors[0].hexCode))
@@ -27,5 +26,14 @@ class AnalogousFragment : BaseColorSchemeFragment<FragmentAnalogousBinding>() {
                 // Handle error
             }
         }
+    }
+
+    override suspend fun getCompatibleColors(color1: Color): List<Color> {
+        return colorMatcher.getAnalogousColors(color1.hexCode)
+    }
+
+    override suspend fun getCompatibleColors(color1: Color, color2: Color): List<Color> {
+        val analogousColors = colorMatcher.getAnalogousColors(color1.hexCode)
+        return analogousColors.filter { it != color1 && it != color2 }
     }
 }
